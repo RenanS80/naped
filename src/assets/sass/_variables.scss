@@ -1,0 +1,56 @@
+$purple: #8257E6;
+$white: #FEFBFB;
+$white-200: #C4C4C4;
+$gray-200: #282830;
+$dark: #13131F;
+
+@mixin container() {
+    max-width: 1240px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+/*     border: 1px solid red;  */
+}
+
+// Flexbox variables
+@mixin flexCenterCenter() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexCenterStart() {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@mixin flexSpaceBetweenCenter() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flexSpaceBetweenStart() {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+// Background variables
+@mixin backgroundConfig() {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+// Text marker variables 
+@mixin textMarker {
+    content: "";
+    position: absolute;
+    background-color: $purple;
+    height: 0.3rem;
+    width: 100%;
+    left: 0;
+}

@@ -1,0 +1,39 @@
+@import "assets/sass/variables";
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .pagination-item {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        background: $gray-200;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: .2s ease;
+
+        &.active {
+            border: 2px solid $purple;
+            color: $purple;
+        }
+    }
+
+    .pagination-number {
+        font-size: 18px;
+        font-weight: bold;
+        color: $white-200;
+    }
+
+    .arrow-next {
+        transform: rotate(180deg);
+        
+        path {
+            fill: $white-200;
+        }
+    }
+}

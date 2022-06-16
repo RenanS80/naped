@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lexend+Deca&display=swap');
+
+@import 'assets/sass/variables';
+
+:root {
+    font-size: 62.5%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;  
+}
+
+::-webkit-scrollbar{
+    width: 0.8rem;   
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: $purple;
+}
+
+::-webkit-scrollbar-track{
+    background-color: $gray-200;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Inter', sans-serif;  
+    background-color: $dark;   
+    color: $white;
+}
+
+h1, 
+h2, 
+h3,
+h4, 
+button {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    color: $white;
+}
+
+h1 {
+    font-size: 4.8rem;
+    line-height: 6rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+    line-height: 5.5rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.base-button {
+    background-color: $purple;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    color: inherit;
+    font-size: 1.4rem;
+    transition: opacity .4s ease;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}

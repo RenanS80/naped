@@ -1,0 +1,53 @@
+@import "assets/sass/variables";
+
+.secondary-card-container {
+    max-width: 76rem;
+    display: flex;
+    gap: 2rem;
+
+    .secondary-card-image {
+        width: 20rem;
+        height: auto;
+        background-image: linear-gradient(360deg, rgb(19, 19, 31) 0%, rgba(19, 19, 31, 0) 80%),
+            url("/assets/images/covers/the-last-of-us-part-ii.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+        position: relative;
+
+        .card-category-secondary {
+            padding: 0.4rem 1.4rem;
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+        }
+    }
+
+    .secondary-card-info {
+        margin-top: 0.5rem;
+        max-width: 42rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+
+        p {
+            font-family: "Inter", sans-serif;
+            font-size: 1.3rem;
+            line-height: 1.6rem;
+            color: $white-200;
+        }
+
+        .secondary-card-data {
+            font-weight: 600;
+        }
+
+        .read-news-button-container {
+            margin-top: 1rem;
+
+            .read-news-button {
+                padding: 0.5rem 1.8rem;
+                font-weight: 700;
+            }
+        }
+    }
+}

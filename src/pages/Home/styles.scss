@@ -1,0 +1,125 @@
+@import "assets/sass/variables";
+
+.main-home {
+    .container {
+        @include container();
+
+        .hero {
+            .hero-title {
+                max-width: 49.5rem;
+                margin-top: 7rem;
+
+                h1 {
+                    max-width: 30.5rem;
+                }
+
+                p {
+                    margin-top: 1.2rem;
+                    font-weight: 500;
+                    font-size: 2rem;
+                    line-height: 3.2rem;
+                    color: $white-200;
+                }
+            }
+
+            .hero-content {
+                display: grid;
+                grid-template: 
+                    "main main-small-1"
+                    "main main-small-2";
+                grid-gap: 2rem;
+                margin-top: 6rem;
+
+                .main-card {
+                    @include backgroundConfig();
+                    @include flexSpaceBetweenStart();
+
+                    width: 76rem;
+                    height: 35rem;
+                    grid-area: main;
+                    flex-direction: column;
+                    padding: 2rem 3rem;
+                    background-image: linear-gradient(360deg, rgb(19, 19, 31) 0%, rgba(19, 19, 31, 0) 80%), url("/assets/images/covers/the-last-of-us-part-i-remake.jpg");
+                    color: $white;
+                    
+                    h3 {
+                        font-weight: 400;
+                        color: $white-200;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                .small-1 {
+                    grid-area: main-small-1;
+                    background-image: linear-gradient(360deg, rgb(19, 19, 31) 0%, rgba(19, 19, 31, 0) 100%), url('/assets/images/covers/ghost-of-tsushima.png');
+                }
+
+                .small-2 {
+                    grid-area: main-small-2;
+                    background-image: linear-gradient(360deg, rgb(19, 19, 31) 0%, rgba(19, 19, 31, 0) 100%), url('/assets/images/covers/band-of-brothers.jpg');
+                }
+
+                .main-small-card {
+                    @include backgroundConfig();
+                    @include flexSpaceBetweenStart();
+
+                    width: 34rem;
+                    height: 16.5rem;
+                    flex-direction: column;
+                    padding: 2rem 1.5rem;
+                    color: $white;
+                    
+                    h3 {
+                        font-weight: 400;
+                        font-size: 1.3rem;
+                        line-height: 2rem;
+                        color: $white-200;
+                    }
+
+                    h4 {
+                        color: $white-200;
+                    }
+                }
+            }
+        }
+
+        .secondary-card-wrapper {
+            display: flex;
+            margin-top: 5rem;
+            gap: 6.5rem;
+
+            .secondary-card-list {
+                width: 76rem;
+                height: 89rem;
+                display: flex;
+                flex-direction: column;
+                gap: 3.5rem;
+                overflow-y: scroll;
+            }
+
+            .secondary-card-aside-title {
+                display: flex;
+
+                h3 {
+                    position: relative;
+
+                    &:after {
+                        @include textMarker();
+
+                        bottom: -1rem;                        
+                    }
+                }
+            }
+
+            .secondary-card-aside-container {
+                display: flex;
+                flex-direction: column;
+                gap: 3.5rem;
+                margin-top: 3rem;
+            }
+        }
+    }
+}

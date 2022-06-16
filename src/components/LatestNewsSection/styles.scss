@@ -1,0 +1,27 @@
+@import "assets/sass/variables";
+
+.latest-news-container {
+    margin-top: 8rem;
+    
+    .latest-news-title {
+        display: flex;
+
+        h3 {
+            position: relative;
+
+            &:after {
+                @include textMarker();
+
+                bottom: -1rem;
+            }
+        }
+    }
+
+    .latest-news-card-container {
+        margin-top: 4rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 3rem;
+    }
+}

@@ -1,0 +1,30 @@
+@import "assets/sass/variables";
+
+footer { 
+
+    .container {
+        @include container();
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .footer-content {
+            width: 50rem;
+            height: 100%;
+            text-align: center;
+            padding: 6rem 0 4rem 0;
+
+            h3 {
+                color: $purple;
+            }
+
+            p {
+                font-weight: 500;
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+                color: $white-200;
+                margin-top: 1.5rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+@import "assets/sass/variables";
+
+.not-found {
+    height: calc(100vh - 28rem);
+
+    p {
+        font-size: 2rem;
+        line-height: 3.4rem;
+        color: $white-200;
+        margin-top: 1.7rem;
+        margin: 1.7rem 0 4rem 0;
+    }
+
+    .container {
+        @include container();
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .not-found-content-container {
+            padding: 0 1.5rem;
+            width: 50rem;
+
+            .back-home-button {
+                padding: 1rem 2.5rem;
+                font-size: 1.8rem;
+            }
+        }
+
+        .not-found-image-container {
+            width: 40rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 100%;
+            }
+
+            p {
+                text-align: center;
+                width: 30rem;
+            }
+        }
+    }
+}

@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lexend+Deca&display=swap");
+
+:root {
+  font-size: 62.5%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+  font-size: 1.6rem;
+  background-color: #13131F;
 }
 
-.App-link {
-  color: #61dafb;
+h1, h2, h3 {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  color: #FEFBFB;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  font-size: 4.8rem;
+  line-height: 6rem;
 }
+
+h2 {
+  font-size: 3.6rem;
+  line-height: 5.5rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+  line-height: 2rem;
+}
+/*# sourceMappingURL=App.css.map */

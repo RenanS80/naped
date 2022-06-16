@@ -1,0 +1,30 @@
+@import "assets/sass/variables";
+
+.search-bar {
+    width: 100%;
+    margin-top: 4.2rem;
+
+    .form-input {
+        position: relative;
+        
+        .icon {
+            @include flexCenterCenter();
+
+            height: 100%;
+            position: absolute;
+            right: 1.8rem;
+        }
+
+        input {
+            width: 100%;
+            display: block;
+            padding: 2.5rem 1.8rem;
+            background-color: $gray-200;
+            font-family: "Lexend Deca", sans-serif;
+            font-size: 1.8rem;
+            color: $white-200;
+            border: 0;
+            outline: 0;
+        }
+    }
+}

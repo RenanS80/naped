@@ -1,0 +1,71 @@
+@import 'assets/sass/variables';
+
+header {
+    height: 8rem;
+
+    .container {
+        @include container();
+        @include flexSpaceBetweenCenter();
+        
+        .header-brand {
+
+            h3 {
+                color: $purple;
+            }
+        }
+
+        nav {           
+            @include flexCenterCenter();
+            gap: 7rem;
+
+            .nav-item-links {
+                @include flexCenterCenter();
+                gap: 6rem;
+                
+                a {
+                    position: relative;
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 500;
+                    font-size: 1.6rem;
+                    line-height: 1.9rem;
+                    color: $white-200;
+                    transition: color .4s ease;
+
+                    &:hover {
+                        color: $white;
+                    }
+
+                    &.nav-item-active {
+                        color: $white;
+
+                        &:after {
+                            @include textMarker();
+
+                            bottom: -0.5rem;
+                        }
+                    } 
+                }
+            }
+
+            .nav-item-button {
+
+                button {
+                    padding: 0.8rem 2rem;
+                    font-weight: 400;
+                    font-size: 1.4rem;
+                    line-height: 1.8rem;
+                    border: 0.1rem solid $purple;
+                    border-radius: 3rem;
+                    background-color: $dark;
+                    color: $white;
+                    cursor: pointer;
+                    transition: opacity .4s ease;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+    }
+}
