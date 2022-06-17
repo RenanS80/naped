@@ -9,10 +9,6 @@
                 max-width: 49.5rem;
                 margin-top: 7rem;
 
-                h1 {
-                    max-width: 30.5rem;
-                }
-
                 p {
                     margin-top: 1.2rem;
                     font-weight: 500;
@@ -29,6 +25,8 @@
                     "main main-small-2";
                 grid-gap: 2rem;
                 margin-top: 6rem;
+
+                border: 1px solid red;
 
                 .main-card {
                     @include backgroundConfig();

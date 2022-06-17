@@ -2,6 +2,7 @@ $purple: #8257E6;
 $white: #FEFBFB;
 $white-200: #C4C4C4;
 $gray-200: #282830;
+$arrow-inactive: #545454;
 $dark: #13131F;
 
 @mixin container() {
@@ -9,7 +10,6 @@ $dark: #13131F;
     height: 100%;
     margin: 0 auto;
     padding: 0 15px;
-/*     border: 1px solid red;  */
 }
 
 // Flexbox variables

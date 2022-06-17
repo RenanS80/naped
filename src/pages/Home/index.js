@@ -41,8 +41,8 @@ function Home() {
             <div className="container">
                 <section className="hero">
                     <div className="hero-title">
-                        <h1>Mundo nerd? Naped!</h1>
-                        <p>O Naped pode ser sua fonte de informações sobre o mundo nerd e outros assuntos relacionados.</p>
+                        <h1>Mundo conectado? Naped!</h1>
+                        <p>O Naped pode ser sua fonte de informações sobre o mundo e outros assuntos relacionados.</p>
                     </div>
                     <div className="hero-content">
                         <div className="main-card">

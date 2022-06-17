@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 7rem;
 
     .pagination-item {
         width: 40px;
@@ -23,6 +24,35 @@
         }
     }
 
+    .pagination-arrow {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        background: $gray-200;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: .2s ease;
+
+        &.active {
+            border: 2px solid $purple;
+            color: $purple;
+        }
+    }
+
+    .pagination-link-active {
+        border: 2px solid $purple;
+        color: $purple;
+    }
+
+    .arrow-inactive {
+        path {
+            fill: $arrow-inactive;
+        }
+    }
+
     .pagination-number {
         font-size: 18px;
         font-weight: bold;
@@ -31,9 +61,6 @@
 
     .arrow-next {
         transform: rotate(180deg);
-        
-        path {
-            fill: $white-200;
-        }
+        margin-left: 1rem;
     }
 }
