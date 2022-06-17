@@ -16,16 +16,16 @@ function Navbar() {
                             <NavLink to="/" className={({isActive}) => isActive ? 'nav-item-active' : ''}>Home</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/series" className={({ isActive }) => isActive ? 'nav-item-active' : ''}>Séries</NavLink>
+                            <NavLink to="/technologies" className={({ isActive }) => isActive ? 'nav-item-active' : ''}>Tecnologia</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/movies" className={({ isActive }) => isActive ? 'nav-item-active' : ''}>Filmes</NavLink>
+                            <NavLink to="/sports" className={({ isActive }) => isActive ? 'nav-item-active' : ''}>Esportes</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/animes" className={({ isActive }) => isActive ? 'nav-item-active' : ''}>Animes</NavLink>
+                            <NavLink to="/entertainments" className={({ isActive }) => isActive ? 'nav-item-active' : ''}>Entretenimento</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/games" className={({ isActive }) => isActive ? 'nav-item-active' : ''}>Games</NavLink>
+                            <NavLink to="/business" className={({ isActive }) => isActive ? 'nav-item-active' : ''}>Negócios</NavLink>
                         </li>
                     </ul>
 

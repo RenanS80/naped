@@ -5,8 +5,37 @@ import Card from 'components/Card';
 import LatestNewsSection from 'components/LatestNewsSection';
 
 import './styles.scss';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { API_KEY, BASE_URL } from 'utils/requests';
 
 function Home() {
+
+    const [articles, setArticles] = useState([]);
+    const [secondaryArticles, setSecondaryArticles] = useState([]);
+
+    useEffect(() => {
+        const getArticles = async () => {
+            const res = await axios.get(`${BASE_URL}/top-headlines?country=pt&pageSize=3&category=business&apiKey=${API_KEY}`)
+
+            setArticles(res.data.articles);
+            console.log(res);
+        }
+
+        getArticles();
+    }, []);
+
+    useEffect(() => {
+        const getSecondaryArticles = async () => {
+            const res = await axios.get(`${BASE_URL}/top-headlines?country=pt&pageSize=6&category=business&apiKey=${API_KEY}`)
+
+            setSecondaryArticles(res.data.articles);
+            console.log(res);
+        }
+
+        getSecondaryArticles();
+    }, []);
+
     return (
         <main className="main-home">
             <div className="container">
@@ -38,12 +67,19 @@ function Home() {
 
                 <section className="secondary-card-wrapper">
                     <div className="secondary-card-list">
-                        <SecondaryCard />
-                        <SecondaryCard />
-                        <SecondaryCard />
-                        <SecondaryCard />
-                        <SecondaryCard />
-                        <SecondaryCard />
+
+                        {secondaryArticles.map((article, key) => (
+                            <div key={key}>
+                                <SecondaryCard
+                                    title={article.title}
+                                    urlToImage={article.urlToImage}
+                                    publishedAt={article.publishedAt}
+                                    description={article.description}
+                                    url={article.url}
+                                />
+                            </div>
+                        ))}
+
                     </div>
 
                     <aside>
@@ -51,9 +87,19 @@ function Home() {
                             <h3>Mais lidas</h3>
                         </div>
                         <div className="secondary-card-aside-container">
-                            <Card category="Games" />
-                            <Card category="Games" />
-                            <Card category="Games" />
+
+                            {articles.map((article, key) => (
+                                <div key={key}>
+                                    <a 
+                                        href={article.url.startsWith('www') || !article.url.startsWith('http') || !article.url.startsWith('https') ?
+                                            'https://'.concat(article.url) : article.url}
+                                        target="_blank" 
+                                        rel="noreferrer">
+                                            <Card title={article.title} category={article.category} urlToImage={article.urlToImage} />
+                                    </a>
+                                </div>
+                            ))}
+
                         </div>
                     </aside>
                 </section>

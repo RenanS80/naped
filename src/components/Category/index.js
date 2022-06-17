@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import './styles.scss';
 
-function Category(props) {
+function Category({ category }) {
     return (
         <div>
-            <Link to={`/${props.link}`} className="base-button card-category">{props.content}</Link>
+            <Link to="link" className="base-button card-category">{category}</Link>
         </div>
 
     );

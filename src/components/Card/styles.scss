@@ -8,9 +8,13 @@
     height: 25rem;
     flex-direction: column;
     position: relative;
-    background-image: linear-gradient(360deg, rgb(19, 19, 31) 0%, rgba(19, 19, 31, 0) 100%),
-        url("/assets/images/covers/the-last-of-us-part-ii.png");
     padding: 2rem 1.5rem;
+
+    h4 {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 
     .card-without-category {
         position: absolute;

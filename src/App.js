@@ -1,14 +1,13 @@
 import Footer from 'components/Footer';
 import Navbar from 'components/Navbar';
-import Animes from 'pages/Animes';
-import Games from 'pages/Games';
 import Home from 'pages/Home';
-import Movies from 'pages/Movies';
-import News from 'pages/News';
 import NotFound from 'pages/NotFound';
-import Series from 'pages/Series';
+import Technology from 'pages/Technology';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.scss';
+import Sports from 'pages/Sports';
+import Entertainments from 'pages/Entertainments';
+import Business from 'pages/Business';
 
 function App() {
   return (
@@ -18,11 +17,10 @@ function App() {
     
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/series" element={<Series />} />
-        <Route path="/movies" element={<Movies />} />
-        <Route path="/animes" element={<Animes />} />
-        <Route path="/games" element={<Games />} />
-        <Route path="/games/1" element={<News />} />
+        <Route path="/technologies" element={<Technology />} />
+        <Route path="/sports" element={<Sports />} />
+        <Route path="/entertainments" element={<Entertainments />} />
+        <Route path="/business" element={<Business />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

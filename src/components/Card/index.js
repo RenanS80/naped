@@ -2,12 +2,11 @@ import Category from 'components/Category';
 
 import './styles.scss';
 
-function Card(props) {
+function Card({ title, category, urlToImage }) {
     return (
-        <div className="card">
-            {props.category ? (<Category content="games" link="games" />) : ''}
-            
-            <h4 className={props.category ? '' : 'card-without-category'}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eros tellus, malesuada.</h4>
+        <div className="card" style={{backgroundImage: `linear-gradient(360deg, rgb(19, 19, 31) 0%, rgba(19, 19, 31, 0) 100%), url(${urlToImage})`}}>
+            <Category category={category} />
+            <h4>{title}</h4>
         </div>
     );
 }
