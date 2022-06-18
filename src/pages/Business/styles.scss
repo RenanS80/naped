@@ -32,11 +32,10 @@
         }
 
         .category-card-container {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 34rem);
             justify-content: space-between;
             gap: 3rem;
-            flex-wrap: wrap;
-            
             margin-top: 9rem;
         }
 

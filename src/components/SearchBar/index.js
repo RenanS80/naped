@@ -1,16 +1,31 @@
 import SearchIcon from 'assets/images/icons/search.svg';
+import { useForm } from 'react-hook-form';
 
 import './styles.scss';
 
-function SearchBar() {
+function SearchBar({ onSubmitFilter }) {
+
+    const { register, handleSubmit } = useForm();
+
+    const onSubmit = (formData) => {
+        onSubmitFilter(formData);
+    }
+
     return (
         <div className="search-bar">
-            <form>
+            <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-input">
                     <span className="icon">
-                        <img src={SearchIcon} alt="Icon search" />
+                        <button>
+                            <img src={SearchIcon} alt="Icon search" />
+                        </button>
                     </span>
-                    <input type="text" placeholder="Quer ajuda na procura? Pesquise aqui" />
+                    <input
+                        {...register('title')}
+                        name='title'
+                        type="text"
+                        placeholder="Quer ajuda na procura? Pesquise aqui"
+                    />
                 </div>
             </form>
         </div>

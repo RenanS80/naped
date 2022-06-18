@@ -1,13 +1,12 @@
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
-import Category from 'components/Category';
+import { API_KEY, BASE_URL } from 'utils/requests';
 import SecondaryCard from 'components/SecondaryCard';
 import Card from 'components/Card';
 import LatestNewsSection from 'components/LatestNewsSection';
 
 import './styles.scss';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import { API_KEY, BASE_URL } from 'utils/requests';
 
 function Home() {
 
@@ -46,7 +45,6 @@ function Home() {
                     </div>
                     <div className="hero-content">
                         <div className="main-card">
-                            <Category content="games" link="games" />
                             <Link to="/games/1">
                                 <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eros tellus, malesuada et velit in,
                                     blandit molestie dolor.</h3>
@@ -54,12 +52,10 @@ function Home() {
                         </div>
 
                         <div className="main-small-card small-1">
-                            <Category content="games" link="games" />
                             <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
                         </div>
 
                         <div className="main-small-card small-2">
-                            <Category content="séries" link="series" />
                             <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
                         </div>
                     </div>
@@ -76,6 +72,7 @@ function Home() {
                                     publishedAt={article.publishedAt}
                                     description={article.description}
                                     url={article.url}
+                                    source={article.source.name}
                                 />
                             </div>
                         ))}
@@ -95,7 +92,11 @@ function Home() {
                                             'https://'.concat(article.url) : article.url}
                                         target="_blank" 
                                         rel="noreferrer">
-                                            <Card title={article.title} category={article.category} urlToImage={article.urlToImage} />
+                                            <Card 
+                                                title={article.title} 
+                                                source={article.source.name} 
+                                                urlToImage={article.urlToImage} 
+                                            />
                                     </a>
                                 </div>
                             ))}

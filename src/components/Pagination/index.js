@@ -1,7 +1,7 @@
-import { ReactComponent as ArrowIcon } from 'assets/images/icons/arrow.svg';
-import Card from 'components/Card';
 import { useEffect, useState } from 'react';
 import ReactPaginate from 'react-paginate';
+import Card from 'components/Card';
+import { ReactComponent as ArrowIcon } from 'assets/images/icons/arrow.svg';
 
 import './styles.scss';
 
@@ -36,7 +36,10 @@ function Pagination(props) {
                                 'https://'.concat(article.url) : article.url}
                             target="_blank"
                             rel="noreferrer">
-                            <Card title={article.title} category={article.category} urlToImage={article.urlToImage} />
+                            <Card 
+                                title={article.title} 
+                                urlToImage={article.urlToImage} 
+                            />
                         </a>
                     </div>
                 ))}

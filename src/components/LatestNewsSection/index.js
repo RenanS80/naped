@@ -1,7 +1,7 @@
 import axios from 'axios';
-import Card from 'components/Card';
 import { useEffect, useState } from 'react';
 import { API_KEY, BASE_URL } from 'utils/requests';
+import Card from 'components/Card';
 
 import './styles.scss';
 
@@ -35,7 +35,11 @@ function LatestNewsSection() {
                                 'https://'.concat(article.url) : article.url}
                             target="_blank"
                             rel="noreferrer">
-                            <Card title={article.title} category={article.category} urlToImage={article.urlToImage} />
+                            <Card 
+                                title={article.title} 
+                                source={article.source.name} 
+                                urlToImage={article.urlToImage} 
+                            />
                         </a>
                     </div>
                 ))}

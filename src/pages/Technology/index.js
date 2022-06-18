@@ -10,12 +10,21 @@ function Technology() {
 
     const [articles, setArticles] = useState([]);
 
+    const [controlComponentData, setControlComponentData] = useState({
+        filterData: {title: ''}
+    });
+
+    const handleSubmitFilter = (data) => {
+        setControlComponentData({filterData: data})
+    }
+
     useEffect(() => {
-        axios.get(`${BASE_URL}/top-headlines?country=pt&category=technology&pageSize=100&apiKey=${API_KEY}`)
+        axios.get(`${BASE_URL}/top-headlines?country=pt&category=technology&pageSize=100&q=${controlComponentData.filterData.title}&apiKey=${API_KEY}`)
             .then(response => {
                 setArticles(response.data.articles);
             })
-    }, []);
+    }, [controlComponentData]);
+
 
     return (
         <section className="section-category">
@@ -27,7 +36,7 @@ function Technology() {
                     </div>
                 </div>
 
-                <SearchBar />
+                <SearchBar onSubmitFilter={handleSubmitFilter} />
 
                 <Pagination data={articles} />
             </div>

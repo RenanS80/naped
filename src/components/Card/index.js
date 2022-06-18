@@ -1,11 +1,13 @@
-import Category from 'components/Category';
+import Source from 'components/Source';
 
 import './styles.scss';
 
-function Card({ title, category, urlToImage }) {
+function Card({ title, urlToImage, source }) {
     return (
-        <div className="card" style={{backgroundImage: `linear-gradient(360deg, rgb(19, 19, 31) 0%, rgba(19, 19, 31, 0) 100%), url(${urlToImage})`}}>
-            <Category category={category} />
+        <div className={source ? 'card card-source' : 'card end'} style={{backgroundImage: `linear-gradient(360deg, rgb(19, 19, 31) 0%, rgba(19, 19, 31, 0) 100%), url(${urlToImage})`}}>
+            {source && 
+                <Source source={source} />
+            }
             <h4>{title}</h4>
         </div>
     );

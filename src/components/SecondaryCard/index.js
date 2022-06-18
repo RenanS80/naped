@@ -1,9 +1,8 @@
-import { Link } from 'react-router-dom';
 import { formatLocalDate } from 'utils/format';
 
 import './styles.scss';
 
-function SecondaryCard({ title, description, publishedAt, urlToImage, url }) {
+function SecondaryCard({ title, description, publishedAt, urlToImage, url, source }) {
 
     // Define tamanho da descrição a ser exibida
     let desc = description;
@@ -15,7 +14,7 @@ function SecondaryCard({ title, description, publishedAt, urlToImage, url }) {
         <div className="secondary-card-container">
             <div className="secondary-card-image" style={{ backgroundImage: `linear-gradient(360deg, rgb(19, 19, 31) 0%, rgba(19, 19, 31, 0) 80%), url(${urlToImage})` }}>
                 <div>
-                    <Link to="/games" className="base-button card-category-secondary">Games</Link>
+                    <p className="base-button card-category-secondary">{source}</p>
                 </div>
             </div>
 
