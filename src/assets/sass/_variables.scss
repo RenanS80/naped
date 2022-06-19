@@ -6,10 +6,10 @@ $arrow-inactive: #545454;
 $dark: #13131F;
 
 @mixin container() {
-    max-width: 1240px;
+    max-width: 124rem;
     height: 100%;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 1.5rem;
 }
 
 // Flexbox variables

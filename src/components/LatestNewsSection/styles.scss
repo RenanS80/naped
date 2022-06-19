@@ -5,6 +5,11 @@
     
     .latest-news-title {
         display: flex;
+        
+        @media (max-width: 1110px) {
+            align-items: center;
+            justify-content: center;
+        }
 
         h3 {
             position: relative;
@@ -23,5 +28,9 @@
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 3rem;
+
+        @media (max-width: 1110px) {
+            justify-content: space-around;
+        }
     }
 }

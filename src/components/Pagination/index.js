@@ -48,7 +48,7 @@ function Pagination(props) {
 
             <ReactPaginate
                 pageCount={pageCount}
-                pageRangeDisplayed={3}
+                pageRangeDisplayed={2}
                 marginPagesDisplayed={2}
                 containerClassName="pagination-container"
                 pageLinkClassName="pagination-item arrow-active"

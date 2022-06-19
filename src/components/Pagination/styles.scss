@@ -1,49 +1,52 @@
 @import "assets/sass/variables";
 
 .pagination-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 7rem;
+    @include container();
+    @include flexCenterCenter();
 
+    margin-top: 7rem;
+    
     .pagination-item {
-        width: 40px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexCenterCenter();
+
+        width: 4rem;
+        height: 4rem;
+        margin-left: 10px;
         border-radius: 5px;
         background: $gray-200;
-        margin-left: 10px;
         cursor: pointer;
         transition: .2s ease;
 
+        @media (max-width: 360px) {
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+
         &.active {
-            border: 2px solid $purple;
+            border: 0.2rem solid $purple;
             color: $purple;
         }
     }
 
     .pagination-arrow {
-        width: 40px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 5px;
+        @include flexCenterCenter();
+
+        width: 4rem;
+        height: 4rem;
+        border-radius: 0.5rem;
         background: $gray-200;
-        margin-left: 10px;
+        margin-left: 1rem;
         cursor: pointer;
         transition: .2s ease;
 
         &.active {
-            border: 2px solid $purple;
+            border: 0.2rem solid $purple;
             color: $purple;
         }
     }
 
     .pagination-link-active {
-        border: 2px solid $purple;
+        border: 0.2rem solid $purple;
         color: $purple;
     }
 
@@ -54,7 +57,7 @@
     }
 
     .pagination-number {
-        font-size: 18px;
+        font-size: 1.8rem;
         font-weight: bold;
         color: $white-200;
     }

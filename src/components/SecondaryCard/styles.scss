@@ -2,8 +2,18 @@
 
 .secondary-card-container {
     max-width: 76rem;
+    min-width: 50rem;
     display: flex;
     gap: 2rem;
+    
+
+    @media (max-width: 1155px) {
+        max-width: 100%;
+    }
+
+    @media (max-width: 700px) {
+        padding: 0 1.5rem;
+    }
 
     .secondary-card-image {
         width: 20rem;
@@ -13,20 +23,42 @@
         background-position: 50% 50%;
         position: relative;
 
+        @media (max-width: 1155px) {
+            width: 35rem;
+        }
+
+        @media (max-width: 700px) {
+            display: none;
+        }
+
         .card-category-secondary {
             padding: 0.4rem 1.4rem;
             position: absolute;
             top: 1rem;
             left: 1rem;
+
+            @media (max-width: 900px) {
+                display: none;
+            }
         }
     }
 
     .secondary-card-info {
         margin-top: 0.5rem;
-        max-width: 42rem;
+        width: 42rem;
         display: flex;
         flex-direction: column;
         gap: 1.2rem;
+        padding: 0 1.5rem;
+
+        @media (max-width: 1155px) {
+            max-width: 100%;
+        }
+
+        @media (max-width: 700px) {
+            width: 100%;
+        }
+
 
         p {
             font-family: "Inter", sans-serif;

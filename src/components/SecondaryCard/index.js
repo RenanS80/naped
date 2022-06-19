@@ -20,7 +20,7 @@ function SecondaryCard({ title, description, publishedAt, urlToImage, url, sourc
 
             <div className="secondary-card-info">
                 <h4>{title}</h4>
-                <p>{desc}</p>
+                <p className="secondary-card-info-description">{desc}</p>
                 <p className="secondary-card-data">{formatLocalDate(publishedAt, "dd/MM/yyyy")}</p>
                 <div className="read-news-button-container">
                     <a

@@ -11,15 +11,15 @@
         .category-banner {
             @include backgroundConfig();
             @include flexCenterStart();
-
+            
             height: 32rem;
             margin-top: 8rem;
             flex-direction: column;
-            padding-left: 4rem;
+            padding: 0 1.5rem;
 
             .category-banner-title {
-                
-                width: 49rem;
+                padding: 0 1.5rem;
+                max-width: 49rem;
 
                 p {
                     color: $white-200;
@@ -35,8 +35,16 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, 34rem);
             justify-content: space-between;
-            gap: 3rem;
+            gap: 4.5rem;
             margin-top: 9rem;
+
+            @media (max-width: 1110px) {
+                justify-content: space-around;
+            }
+
+            @media (max-width: 400px) {
+                grid-template-columns: repeat(auto-fill, 28rem);
+            }
         }
 
         .pagination-card-container {

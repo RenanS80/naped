@@ -24,7 +24,7 @@ function SearchBar({ onSubmitFilter }) {
                         {...register('title')}
                         name='title'
                         type="text"
-                        placeholder="Quer ajuda na procura? Pesquise aqui"
+                        placeholder="Pesquise aqui"
                     />
                 </div>
             </form>

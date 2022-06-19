@@ -12,9 +12,7 @@ function LatestNewsSection() {
     useEffect(() => {
         const getArticles = async () => {
             const res = await axios.get(`${BASE_URL}/top-headlines?country=pt&pageSize=6&apiKey=${API_KEY}`)
-
             setArticles(res.data.articles);
-            console.log(res);
         }
 
         getArticles();

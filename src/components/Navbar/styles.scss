@@ -1,4 +1,4 @@
-@import 'assets/sass/variables';
+@import "assets/sass/variables";
 
 header {
     height: 8rem;
@@ -6,63 +6,119 @@ header {
     .container {
         @include container();
         @include flexSpaceBetweenCenter();
-        
-        .header-brand {
 
+        .header-brand {
             h3 {
                 color: $purple;
             }
         }
 
-        nav {           
-            @include flexCenterCenter();
-            gap: 7rem;
+        .menu-section {
+            .menu-toggle {
+                @media (max-width: 768px) {
+                    width: 4rem; // define o tamanho do container que engloba o menu mobile
+                    height: 3rem;
+                    margin-right: 2rem;
 
-            .nav-item-links {
-                @include flexCenterCenter();
-                gap: 6rem;
-                
-                a {
-                    position: relative;
-                    font-family: 'Inter', sans-serif;
-                    font-weight: 500;
-                    font-size: 1.6rem;
-                    line-height: 1.9rem;
-                    color: $white-200;
-                    transition: color .4s ease;
-
-                    &:hover {
-                        color: $white;
+                    .one,
+                    .two,
+                    .three {
+                        width: 100%;
+                        height: 0.5rem;
+                        background-color: $white; // cria os três traços do menu mobile
+                        margin: 0.6rem auto;
+                        transition-duration: 0.3s;
+                        border-radius: 0.5rem;
                     }
-
-                    &.nav-item-active {
-                        color: $white;
-
-                        &:after {
-                            @include textMarker();
-
-                            bottom: -0.5rem;
-                        }
-                    } 
                 }
             }
 
-            .nav-item-button {
+            nav {
+                
+                @media (max-width: 768px) {
+                    display: none;
+                }
 
-                button {
-                    padding: 0.8rem 2rem;
-                    font-weight: 400;
-                    font-size: 1.4rem;
-                    line-height: 1.8rem;
-                    border: 0.1rem solid $purple;
-                    border-radius: 3rem;
-                    background-color: $dark;
-                    color: $white;
-                    cursor: pointer;
-                    transition: opacity .4s ease;
+                ul {
+                    @include flexCenterCenter();
+                    gap: 6rem;
 
-                    &:hover {
-                        opacity: 0.8;
+                    a {
+                        position: relative;
+                        font-family: 'Inter', sans-serif;
+                        font-weight: 500;
+                        font-size: 1.6rem;
+                        line-height: 1.9rem;
+                        color: $white-200;
+                        transition: color .4s ease;
+    
+                        &:hover {
+                            color: $white;
+                        }
+    
+                        &.nav-item-active {
+                            color: $white;
+    
+                            &:after {
+                                @include textMarker();
+    
+                                bottom: -0.5rem;
+                            }
+                        } 
+                    }
+                }
+            }
+        }
+
+        .menu-section.on {
+            @media (max-width: 768px) {
+                width: 100vw;
+                height: 100vh;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: $dark;
+                display: flex;
+                padding-top: 7rem;
+                padding-left: 3rem;
+
+                .menu-toggle {
+                    position: absolute;
+                    right: 1.2rem;
+                    top: 2.5rem;
+
+                    .one,
+                    .two,
+                    .three {
+                        background-color: $white;
+                    }
+
+                    .one {
+                        transform: rotate(45deg) translate(0.7rem, 0.7rem);
+                    }
+
+                    .two {
+                        opacity: 0;
+                    }
+
+                    .three {
+                        transform: rotate(-45deg) translate(0.8rem, -0.9rem);
+                    }
+                }
+
+                nav {
+                    display: block; // exibe os itens da nav que foram escondidos
+
+                    ul {
+                        display: inherit;
+
+                        a {
+                            color: $white;
+                            font-weight: 700;
+                            font-size: 2.5rem;
+                            line-height: 8rem; // aumenta a distância de um item para o outro
+                            transition-duration: 0.5s;
+                        }
                     }
                 }
             }
