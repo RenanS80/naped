@@ -5,10 +5,15 @@ import './styles.scss';
 function SecondaryCard({ title, description, publishedAt, urlToImage, url, source }) {
 
     // Define tamanho da descrição a ser exibida
-    let desc = description;
+    // Comentado porque o retorno da API está vindo sempre com description e outros campos null
+    /*let desc = description;
+    console.log(desc);
     if (desc.length > 120) {
         desc = desc.substring(0, 120) + '...'
     }
+    if(desc == null) {
+        desc = '';
+    }*/
 
     return (
         <div className="secondary-card-container">
@@ -20,7 +25,7 @@ function SecondaryCard({ title, description, publishedAt, urlToImage, url, sourc
 
             <div className="secondary-card-info">
                 <h4>{title}</h4>
-                <p className="secondary-card-info-description">{desc}</p>
+                <p className="secondary-card-info-description">{description}</p>
                 <p className="secondary-card-data">{formatLocalDate(publishedAt, "dd/MM/yyyy")}</p>
                 <div className="read-news-button-container">
                     <a

@@ -15,7 +15,7 @@ function Home() {
 
     useEffect(() => {
         const getArticles = async () => {
-            const res = await axios.get(`${BASE_URL}/top-headlines?country=pt&pageSize=3&category=business&apiKey=${API_KEY}`)
+            const res = await axios.get(`${BASE_URL}/top-headlines?country=pt&pageSize=3&category=entertainment&apiKey=${API_KEY}`)
             setArticles(res.data.articles);
         }
 
@@ -30,6 +30,9 @@ function Home() {
 
         getSecondaryArticles();
     }, []);
+
+    console.log('ARTICLES: ' +articles);
+    console.log('ARTICLES: ' +articles.title);
 
     return (
         <main className="main-home">
